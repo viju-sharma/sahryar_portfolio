@@ -1,8 +1,5 @@
 :root {
   --primaryColor: #353535;
   --primaryBackgroundColor: #0e0e0e;
-}
-
-body {
-  font-family: "HelveticaNeueCyr", sans-serif;
+  --primaryFontFamily: "HelveticaNeueCyr", monospace;
 }

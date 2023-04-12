@@ -1,46 +1,30 @@
 import React, { useEffect, useState } from "react";
-import classes from "../HomePage.module.css";
+import classes from "./Intro.module.css";
 
-const item1 = (
-  <>
-    <h1>SAHRYAR</h1>
-    <span>INTERIOR DESIGNER</span>{" "}
-  </>
-);
+const item1 = <h4 className={classes.title}>SAHRYAR INTERIOR DESIGNER</h4>;
 
 const item2 = (
-  <>
-    <h1> ARCHITECTURAL DESIGN BUREAU</h1>
-    <span>Interior design and architecture services worldwide.</span>
-    <span>Authors supervision.</span>
-  </>
+  <div className={classes.item2}>
+    <div className="w-fit m-auto">
+      <p className={classes.title2}>ARCHITECTURAL DESIGN BUREAU</p>
+    </div>
+    <div>
+      <span>Interior design and architecture services worldwide.</span>
+      <span>Authors supervision.</span>
+    </div>
+  </div>
 );
 
 const Intro = () => {
   const [sliderContent, setSliderContent] = useState(item1);
-  const [slideAnimate, setSlideAnimate] = useState<
-    "animate__fadeInLeft" | "animate__fadeOutRight"
-  >("animate__fadeInLeft");
 
   useEffect(() => {
-    new Promise<void>((resolve, reject) => {
-      setTimeout(() => {
-        setSlideAnimate("animate__fadeOutRight");
-        resolve();
-      }, 1500);
-    }).then(() => {
-      setTimeout(() => {
-        setSlideAnimate("animate__fadeInLeft");
-        setSliderContent(item2);
-      }, 1000);
-    });
+    setTimeout(() => {
+      setSliderContent(item2);
+    }, 2000);
   }, []);
 
-  const sliderClasses = [
-    classes.container,
-    "animate__animated",
-    slideAnimate,
-  ].join(" ");
+  const sliderClasses = [classes.container].join(" ");
 
   return (
     <div className={classes.mainContainer}>

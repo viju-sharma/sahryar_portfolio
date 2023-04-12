@@ -1,0 +1,52 @@
+.mainContainer {
+  background-color: var(--primaryBackgroundColor);
+  min-height: 100vh;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+.container {
+  text-align: center;
+  margin: auto;
+  font-size: 3rem;
+  color: var(--primaryColor);
+}
+
+.item2 span {
+  font-size: 2rem;
+  display: block;
+}
+.title {
+  width: 25ch;
+  overflow: hidden;
+  font-size: 40px;
+  font-family: monospace;
+  white-space: nowrap;
+  transition: all ease 1s;
+  animation: printed-text 0.8s steps(25);
+}
+
+.title2 {
+  width: 27ch;
+  overflow: hidden;
+  font-size: 40px;
+  font-family: monospace;
+  white-space: nowrap;
+  transition: all ease 1s;
+  animation: printed-text 1s steps(27);
+}
+
+@keyframes printed-text {
+  from {
+    width: 0%;
+  }
+}
+
+@media (width <= 1024px) {
+}
+
+@media (width <= 768px) {
+}
+
+@media (width <= 320px) {
+}
